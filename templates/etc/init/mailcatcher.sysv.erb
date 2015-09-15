@@ -3,7 +3,7 @@
 # chkconfig: - 85 15
 # description: mailcatcher is a captive smtp server with a web interface
 # which allows you to view "sent" emails.
-# 
+#
 # processname: mailcatcher
 #
 
@@ -11,7 +11,7 @@
 PID=""
 
 updatepid(){
-   PID=$(ps aux|grep -E "ruby(-.*)* <%= @mailcatcher_path %>/[m]ailcatcher" |awk '{print $2}')
+   PID=$(ps aux|grep -E "ruby[0-9.-]* <%= @mailcatcher_path %>/[m]ailcatcher" |awk '{print $2}')
 }
 
 start(){
