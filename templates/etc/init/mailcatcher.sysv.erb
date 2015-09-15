@@ -28,7 +28,9 @@ stop(){
    updatepid
    if [ ! -z $PID ] ; then
       kill $PID
-      return $?
+      RET=$?
+      sleep 1
+      return $RET
    fi
 }
 
