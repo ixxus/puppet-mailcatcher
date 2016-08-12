@@ -78,7 +78,7 @@ class mailcatcher::params {
             before   => Package['mailcatcher'],
           }
         }
-        '2015': {
+        /^201[5-9]$/: {
           $mailcatcher_path = '/usr/local/bin'
           $packages = union($std_packages, ['rubygem-json_pure'])
           $version  = $default_version
